@@ -1,0 +1,75 @@
+.sent {
+    background-color: lightgray;
+    border-radius: 2px;
+    font-size: 1rem;
+    width: max-content;
+    margin: 1px;
+    padding: 6px;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1rem;
+    border-radius: 15px;
+}
+
+
+.recived {
+    background-color: #0078FF;
+    margin: 1px;
+    padding: 6px;
+    width: max-content;
+    color: white;
+    font-size: 1rem;
+    font-weight: 200;
+    border-radius: 15px;
+    
+ 
+}
+
+.container {
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin:2rem;
+
+}
+
+.messageBox {
+    display: flex;
+    flex-direction: column;
+    
+
+    
+}
+
+.textBoxRecived {
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.textBoxSend {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.button {
+    width: 30%;
+
+}
+
+.inputForm {
+    display: flex;
+    margin: 5px;
+}
+
+.inputField {
+    width: 70%;
+    margin-right: 5px;
+}
+
+.textSrcoll {
+    overflow-y: scroll;
+}
