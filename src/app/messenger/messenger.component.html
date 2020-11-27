@@ -1,13 +1,5 @@
 <h1>MESSENGER</h1>
 <div>
-    <app-chat 
-    (messageCreated)="onMessageAdded($event)" 
-    [recivedMessages]="messages"
-    [id]='1'
-    ></app-chat>
-    <app-chat 
-    (messageCreated)="onMessageAdded($event)" 
-    [recivedMessages]="messages" 
-    [id]='2'
-    ></app-chat>
+    <app-chat [id]='1'></app-chat>
+    <app-chat [id]='2'></app-chat>
 </div>

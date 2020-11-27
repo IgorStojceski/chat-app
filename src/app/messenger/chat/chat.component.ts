@@ -1,5 +1,5 @@
-import { invalid } from '@angular/compiler/src/render3/view/util';
-import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
+import { MessagesService } from '../../messages.service';
+import { Component, OnInit} from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -9,17 +9,16 @@ import { NgForm } from '@angular/forms';
 })
 export class ChatComponent implements OnInit {
 
-  @Input() recivedMessages = [];
-  @Input() id: any;
-
-
-  @Output() messageCreated: EventEmitter<any>
+ messages = [];
+ id:any;
 
 
 
-  constructor() { 
+
+
+  constructor(public messagesService: MessagesService) { 
     
-    this.messageCreated = new EventEmitter();
+  
   }
 
  
@@ -27,6 +26,7 @@ export class ChatComponent implements OnInit {
   
 
   ngOnInit(): void {
+    this.messages = this.messagesService.getMessages();
   }
 
 
@@ -35,9 +35,8 @@ export class ChatComponent implements OnInit {
     if(form.invalid) {
       return;
     }
-    const chatMessage = { id:this.id, message:form.value.messageChat};
-    console.log(chatMessage.message)
-    this.messageCreated.emit(chatMessage);
+    this.messagesService.addMessages(this.id, form.value.messageChat)
+    console.log(this.messages)
     form.reset();
     
   }

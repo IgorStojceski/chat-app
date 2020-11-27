@@ -1,8 +1,8 @@
 <div class="container">
     <div class="textSrcoll">
-         <div class="messageBox"  *ngFor="let message of recivedMessages">
+         <div class="messageBox"  *ngFor="let message of messages">
                  <div [ngClass]="{'textBoxSend': message.id === id , 'textBoxRecived': message.id !== id}">
-                     <p  [ngClass]="{'sent': message.id === id , 'recived': message.id !== id}" >{{message.message}}</p>
+                     <p  [ngClass]="{'sent': message.id === id , 'recived': message.id !== id}" >{{message.messages}}</p>
                 </div>
             </div>
         </div>

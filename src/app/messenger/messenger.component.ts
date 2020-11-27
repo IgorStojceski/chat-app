@@ -6,11 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./messenger.component.css']
 })
 export class MessengerComponent implements OnInit {
-  messages = [];
-
-  onMessageAdded(chatMessage) {
-    this.messages.push(chatMessage);
-  }
+  
 
 
   constructor() { }
