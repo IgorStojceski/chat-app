@@ -1,4 +1,4 @@
-.sent {
+.recived {
     background-color: lightgray;
     border-radius: 2px;
     font-size: 1rem;
@@ -12,7 +12,7 @@
 }
 
 
-.recived {
+.sent {
     background-color: #0078FF;
     margin: 1px;
     padding: 6px;
@@ -45,12 +45,12 @@
     
 }
 
-.textBoxRecived {
+.textBoxSent {
     display: flex;
     justify-content: flex-end;
     
 }
-.textBoxSend {
+.textBoxRecived {
     display: flex;
     justify-content: flex-start;
 }
