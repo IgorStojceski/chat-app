@@ -6,7 +6,7 @@ const Message = require('./models/message');
 
 const app = express();
 
-// mongoose.connect("mongodb+srv://igor:jBrzOlSAZVwhbynz@cluster0.cxz4y.mongodb.net/<dbname>?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://igor:jBrzOlSAZVwhbynz@cluster0.cxz4y.mongodb.net/<dbname>?retryWrites=true&w=majority")
 .then(()=> {
   console.log('Connected to database')
 })
